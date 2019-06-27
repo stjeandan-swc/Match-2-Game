@@ -1,0 +1,209 @@
+<html>
+  <head>
+    <title>Match Two Game</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style/myStyle.css" type="text/css">
+
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+  </head>
+  <body>
+
+    <div>
+      <section id="announcement">Congrats You Win!</section>
+    </div>
+
+    <div class="scoreBoard">
+      <span id="shortTimer"></span>
+      <h1>Match Two Game</h1>
+      <span id="gameTimer"></span>
+      <button id="btn" type="" name"gameReset" onclick="gameReset()">New Game</button>
+      <div class="score">
+        <h2><u>Turns Taken</u></h2>
+        <h3 id="turns"></h3>
+      </div>
+      <div class="score">
+        <h2><u>Matches Made</u></h2>
+        <h3 id="matches"></h3>
+      </div>
+      <div class="score">
+        <h2><u>Total Games Played</u></h2>
+        <h3 id="games"></h3>
+        <h3 id="wins"></h3>
+        <h3 id="losses"></h3>
+      </div>
+    </div>
+
+    <div class="container">
+      <div id"innerContainer">
+        <section id="sOne">
+          <div class="cardContainer" onclick="makeMove(this);">
+            <a class="front face" id="A1"></a>
+            <a class="back face" id="A1"></a>
+          </div>
+          <div class="cardContainer" onclick="makeMove(this);">
+            <a class="front face" id="A2"></a>
+            <a class="back face" id="A2"></a>
+          </div>
+          <div class="cardContainer" onclick="makeMove(this);">
+            <a class="front face" id="A3"></a>
+            <a class="back face" id="A3"></a>
+          </div>
+          <div class="cardContainer" onclick="makeMove(this);">
+            <a class="front face" id="A4"></a>
+            <a class="back face" id="A4"></a>
+          </div>
+          <div class="cardContainer" onclick="makeMove(this);">
+            <a class="front face" id="A5"></a>
+            <a class="back face" id="A5"></a>
+          </div>
+          <div class="cardContainer" onclick="makeMove(this);">
+            <a class="front face" id="A6"></a>
+            <a class="back face" id="A6"></a>
+          </div>
+        </section>
+
+        <section id="sTwo">
+          <div class="cardContainer" onclick="makeMove(this);">
+            <a class="front face" id="B1"></a>
+            <a class="back face" id="B1"></a>
+          </div>
+          <div class="cardContainer" onclick="makeMove(this);">
+            <a class="front face" id="B2"></a>
+            <a class="back face" id="B2"></a>
+          </div>
+          <div class="cardContainer" onclick="makeMove(this);">
+            <a class="front face" id="B3"></a>
+            <a class="back face" id="B3"></a>
+          </div>
+          <div class="cardContainer" onclick="makeMove(this);">
+            <a class="front face" id="B4"></a>
+            <a class="back face" id="B4"></a>
+          </div>
+          <div class="cardContainer" onclick="makeMove(this);">
+            <a class="front face" id="B5"></a>
+            <a class="back face" id="B5"></a>
+          </div>
+          <div class="cardContainer" onclick="makeMove(this);">
+            <a class="front face" id="B6"></a>
+            <a class="back face" id="B6"></a>
+          </div>
+        </section>
+
+        <section id="sThree">
+          <div class="cardContainer" onclick="makeMove(this);">
+            <a class="front face" id="C1"></a>
+            <a class="back face" id="C1"></a>
+          </div>
+          <div class="cardContainer" onclick="makeMove(this);">
+            <a class="front face" id="C2"></a>
+            <a class="back face" id="C2"></a>
+          </div>
+          <div class="cardContainer" onclick="makeMove(this);">
+            <a class="front face" id="C3"></a>
+            <a class="back face" id="C3"></a>
+          </div>
+          <div class="cardContainer" onclick="makeMove(this);">
+            <a class="front face" id="C4"></a>
+            <a class="back face" id="C4"></a>
+          </div>
+          <div class="cardContainer" onclick="makeMove(this);">
+            <a class="front face" id="C5"></a>
+            <a class="back face" id="C5"></a>
+          </div>
+          <div class="cardContainer" onclick="makeMove(this);">
+            <a class="front face" id="C6"></a>
+            <a class="back face" id="C6"></a>
+          </div>
+        </section>
+
+        <section id="sFour">
+          <div class="cardContainer" onclick="makeMove(this);">
+            <a class="front face" id="D1"></a>
+            <a class="back face" id="D1"></a>
+          </div>
+          <div class="cardContainer" onclick="makeMove(this);">
+            <a class="front face" id="D2"></a>
+            <a class="back face" id="D2"></a>
+          </div>
+          <div class="cardContainer" onclick="makeMove(this);">
+            <a class="front face" id="D3"></a>
+            <a class="back face" id="D3"></a>
+          </div>
+          <div class="cardContainer" onclick="makeMove(this);">
+            <a class="front face" id="D4"></a>
+            <a class="back face" id="D4"></a>
+          </div>
+          <div class="cardContainer" onclick="makeMove(this);">
+            <a class="front face" id="D5"></a>
+            <a class="back face" id="D5"></a>
+          </div>
+          <div class="cardContainer" onclick="makeMove(this);">
+            <a class="front face" id="D6"></a>
+            <a class="back face" id="D6"></a>
+          </div>
+        </section>
+
+        <section id="sFive">
+          <div class="cardContainer" onclick="makeMove(this);">
+            <a class="front face" id="E1"></a>
+            <a class="back face" id="E1"></a>
+          </div>
+          <div class="cardContainer" onclick="makeMove(this);">
+            <a class="front face" id="E2"></a>
+            <a class="back face" id="E2"></a>
+          </div>
+          <div class="cardContainer" onclick="makeMove(this);">
+            <a class="front face" id="E3"></a>
+            <a class="back face" id="E3"></a>
+          </div>
+          <div class="cardContainer" onclick="makeMove(this);">
+            <a class="front face" id="E4"></a>
+            <a class="back face" id="E4"></a>
+          </div>
+          <div class="cardContainer" onclick="makeMove(this);">
+            <a class="front face" id="E5"></a>
+            <a class="back face" id="E5"></a>
+          </div>
+          <div class="cardContainer" onclick="makeMove(this);">
+            <a class="front face" id="E6"></a>
+            <a class="back face" id="E6"></a>
+          </div>
+        </section>
+
+        <section id="sSix">
+          <div class="cardContainer" onclick="makeMove(this);">
+            <a class="front face" id="F1"></a>
+            <a class="back face" id="F1"></a>
+          </div>
+          <div class="cardContainer" onclick="makeMove(this);">
+            <a class="front face" id="F2"></a>
+            <a class="back face" id="F2"></a>
+          </div>
+          <div class="cardContainer" onclick="makeMove(this);">
+            <a class="front face" id="F3"></a>
+            <a class="back face" id="F3"></a>
+          </div>
+          <div class="cardContainer" onclick="makeMove(this);">
+            <a class="front face" id="F4"></a>
+            <a class="back face" id="F4"></a>
+          </div>
+          <div class="cardContainer" onclick="makeMove(this);">
+            <a class="front face" id="F5"></a>
+            <a class="back face" id="F5"></a>
+          </div>
+          <div class="cardContainer" onclick="makeMove(this);">
+            <a class="front face" id="F6"></a>
+            <a class="back face" id="F6"></a>
+          </div>
+        </section>
+      </div>
+    </div>
+
+
+    <script src="Card.js" type="text/javascript"></script>
+    <script src="CardDeck.js" type="text/javascript"></script>
+    <script src="Dealer.js" type="text/javascript"></script>
+    <script src="ScoreBoard.js" type="text/javascript"></script>
+    <script src="GameManager.js" type="text/javascript"></script>
+  </body>
+</html>

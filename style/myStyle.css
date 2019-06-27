@@ -1,0 +1,134 @@
+h1, h2, h3, h4,
+h5, h6
+{
+  font-family: 'Indie Flower', sans-serif;
+  font-size: 24px;
+}
+
+button
+{
+  font-size: 24px;
+  box-shadow: 3px 3px 3px black;
+  height: 50px;
+}
+
+section
+{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+  margin: 25px;
+}
+
+a
+{
+  border: solid 0.1px black;
+  box-shadow: 10px 10px 5px black;
+}
+
+span
+{
+  text-align: center;
+  font-size: 36px;
+}
+
+/*  id styling   */
+#innerContainer
+{
+  position: relative;
+  z-index: 1;
+}
+
+#innerContainer
+{
+  perspective: 1000;
+}
+
+/*  Classes styling   */
+.container
+{
+  border: solid 2px black;
+  border-radius: 15px;
+  box-shadow: 3px 3px 5px black;
+  background-image:  url("img/greenFelt.jpg");
+  width: 75%;
+  height: 600px;
+
+  margin: 15px;
+}
+
+.scoreBoard
+{
+  display: flex;
+  flex-direction: column;
+  border: solid 2px black;
+  box-shadow: 3px 3px 5px black;
+  border-radius: 15px;
+  width: 20%;
+  height: 575px;
+
+  margin-right: 10px;
+  padding: 25px 10px 0 10px;
+  float: right;
+}
+
+.score
+{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  line-height: 5px;
+}
+
+.cardContainer
+{
+  width: 64px;
+  height: 64px;
+
+  transform-style: preserve-3d;
+  transition: all 1.0s linear;
+}
+/*
+.cardContainer:hover
+{
+  transform: rotateY(180deg);
+}
+*/
+.face
+{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.face.back
+{
+  display: block;
+  transform: rotateY(180deg);
+  box-sizing: border-box;
+  background-image: url("img/cardBack.png");
+}
+
+#announcement
+{
+  z-index: -2;
+  position: absolute;
+  top: 145px;
+  left: 175px;
+
+  text-align: center;
+  font-size: 9vmin;
+
+  border: double 15px black;
+  box-shadow: 10px 10px 5px black;
+  background-color: white;
+
+  width: 45%;
+  height: 25%;
+  padding-top: 60px;
+
+  opacity: 0;
+}
